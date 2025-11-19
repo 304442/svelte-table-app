@@ -119,7 +119,7 @@ export class AppStore {
   private generateInitialTableData(): TableViewData {
     const columns = Array.from({ length: 25 }, (_, i) => ({
       id: `col-${i}`,
-      header: `Field ${i + 1}`,
+      header: `Column ${i + 1}`,
       width: 'auto'
     }));
 
@@ -127,13 +127,43 @@ export class AppStore {
       id: `row-${i}`,
       cells: Array.from({ length: 25 }, (_, j) => ({
         id: `cell-${i}-${j}`,
-        value: i * 25 + j + 1,
+        value: this.generateCellContent(i, j),
         editable: true
       })),
       bgColor: i % 2 === 0 ? 'white' : 'slate'
     }));
 
     return { rows, columns, totalRows: 37, totalColumns: 25 };
+  }
+
+  private generateCellContent(row: number, col: number): string {
+    const categories = [
+      ['Project', 'Task', 'Meeting', 'Deadline', 'Priority'],
+      ['Client', 'Status', 'Progress', 'Budget', 'Timeline'],
+      ['Feature', 'Bug', 'Issue', 'Review', 'Approve'],
+      ['Design', 'Development', 'Testing', 'Deploy', 'Monitor'],
+      ['Goal', 'Metric', 'Target', 'Actual', 'Variance']
+    ];
+
+    const values = [
+      'Active', 'In Progress', 'Completed', 'Pending', 'Blocked',
+      'High', 'Medium', 'Low', 'Critical', 'Normal',
+      'Q1', 'Q2', 'Q3', 'Q4', 'Annual',
+      '✓', '✗', '⚠', '📋', '📊',
+      'Design', 'Code', 'Test', 'Launch', 'Maintain'
+    ];
+
+    if (row === 0) {
+      return categories[col % categories.length][col % categories[0].length];
+    } else if (col === 0) {
+      return `Task ${row}`;
+    } else if (row === 1 && col < 10) {
+      return values[col];
+    } else if (row < 5 && col < 5) {
+      return `${Math.floor(Math.random() * 100)}%`;
+    } else {
+      return values[(row + col) % values.length];
+    }
   }
 
   private generateInitialScheduleData(): ScheduleActivity[] {
