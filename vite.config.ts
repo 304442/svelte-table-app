@@ -18,6 +18,9 @@ export default defineConfig({
     strictPort: true
   },
   build: {
-    target: 'esnext'
-  }
+    target: 'esnext',
+    outDir: 'dist',
+    assetsDir: 'assets'
+  },
+  base: '/svelte-table-app/'
 })
