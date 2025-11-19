@@ -29,10 +29,10 @@
     <div class="space-y-1">
       {#each navigationItems as item}
         <Button
-          variant={currentView === item.view ? 'primary' : 'ghost'}
-          size="sm"
+          variant={currentView === item.view ? 'primary' : 'secondary'}
+          size="md"
           onclick={() => handleNavigation(item.view)}
-          class="w-full justify-start transform transition-all duration-200 hover:scale-110"
+          class="w-full justify-start transform transition-all duration-200 hover:scale-110 border border-slate-300"
         >
           <span class="mr-2">{item.icon}</span>
           {item.label}

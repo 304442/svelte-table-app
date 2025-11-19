@@ -13,6 +13,12 @@
   // Reactive state using Svelte 5 runes - keep store state in runes
   let store = appStore;
   let state = $state(store.state);
+
+  // Debug logging - use $effect to log state changes
+  $effect(() => {
+    console.log('App state:', state);
+    console.log('Sidebar open:', state.sidebarOpen);
+  });
   let tableStats = $derived({
     totalRows: state.tableViewData.rows.length,
     totalColumns: state.tableViewData.columns.length,
