@@ -1,0 +1,24 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom component utilities */
+.table-container {
+  @apply overflow-auto bg-white;
+}
+
+.compact-input {
+  @apply text-xs font-normal text-slate-900 bg-white border border-slate-300 rounded px-0 py-0 focus:outline-none focus:ring-0 focus:ring-primary/20 focus:border-t border-primary;
+}
+
+.compact-button {
+  @apply text-xs font-normal text-primary hover:text-primary-700 hover:bg-primary-50 px-1 py-0 rounded transition-all duration-200 whitespace-nowrap overflow-hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @apply flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 p-8 m-0;
+}
