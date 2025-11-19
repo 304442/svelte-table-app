@@ -138,6 +138,7 @@ export class AppStore {
 
   private generateInitialScheduleData(): ScheduleActivity[] {
     return [
+      // Spiritual Activities
       {
         id: 'activity-1',
         time: 'QIYAM',
@@ -156,9 +157,133 @@ export class AppStore {
       },
       {
         id: 'activity-3',
-        time: '7AM - 9AM',
+        time: 'FAJR',
+        day: 'DAILY',
+        activity: 'Pray Fajr',
+        weeklyTracker: [false, false, false, false, false, false, false],
+        stats: { weekly: 0, monthly: 0, streak: 0 }
+      },
+      // Morning Activities
+      {
+        id: 'activity-4',
+        time: '6AM - 7AM',
         day: 'MON/THU',
         activity: 'Commute (Morning)',
+        weeklyTracker: [false, false, false, false, false, false, false],
+        stats: { weekly: 0, monthly: 0, streak: 0 }
+      },
+      {
+        id: 'activity-5',
+        time: 'DAILY',
+        day: 'DAILY',
+        activity: 'Exercise (Morning)',
+        weeklyTracker: [false, false, false, false, false, false, false],
+        stats: { weekly: 0, monthly: 0, streak: 0 }
+      },
+      {
+        id: 'activity-6',
+        time: 'DAILY',
+        day: 'DAILY',
+        activity: 'Eat Meal 1',
+        weeklyTracker: [false, false, false, false, false, false, false],
+        stats: { weekly: 0, monthly: 0, streak: 0 }
+      },
+      // Work/Personal Time
+      {
+        id: 'activity-7',
+        time: '9AM - 5PM',
+        day: 'MON-FRI',
+        activity: 'Work',
+        weeklyTracker: [false, false, false, false, false, false, false],
+        stats: { weekly: 0, monthly: 0, streak: 0 }
+      },
+      {
+        id: 'activity-8',
+        time: '5PM - 7PM',
+        day: 'MON/TUE/WED/THU',
+        activity: 'Do Personal Projects',
+        weeklyTracker: [false, false, false, false, false, false, false],
+        stats: { weekly: 0, monthly: 0, streak: 0 }
+      },
+      {
+        id: 'activity-9',
+        time: 'DAILY',
+        day: 'DAILY',
+        activity: 'Call (Family, Friends, Dates)',
+        weeklyTracker: [false, false, false, false, false, false, false],
+        stats: { weekly: 0, monthly: 0, streak: 0 }
+      },
+      // Errands and Chores
+      {
+        id: 'activity-10',
+        time: 'SAT',
+        day: 'SAT',
+        activity: 'Run Errands (Grocery, Meal Prep)',
+        weeklyTracker: [false, false, false, false, false, false, false],
+        stats: { weekly: 0, monthly: 0, streak: 0 }
+      },
+      {
+        id: 'activity-11',
+        time: 'SUN',
+        day: 'SUN',
+        activity: 'Do Chores (House, Laundry)',
+        weeklyTracker: [false, false, false, false, false, false, false],
+        stats: { weekly: 0, monthly: 0, streak: 0 }
+      },
+      {
+        id: 'activity-12',
+        time: 'FRI/SAT/SUN',
+        day: 'FRI/SAT/SUN',
+        activity: 'Visit (Family/Friends/Dates)',
+        weeklyTracker: [false, false, false, false, false, false, false],
+        stats: { weekly: 0, monthly: 0, streak: 0 }
+      },
+      // Prayer Times
+      {
+        id: 'activity-13',
+        time: 'DHUHR',
+        day: 'DAILY',
+        activity: 'Pray Dhuhr',
+        weeklyTracker: [false, false, false, false, false, false, false],
+        stats: { weekly: 0, monthly: 0, streak: 0 }
+      },
+      {
+        id: 'activity-14',
+        time: 'ASR',
+        day: 'DAILY',
+        activity: 'Pray Asr',
+        weeklyTracker: [false, false, false, false, false, false, false],
+        stats: { weekly: 0, monthly: 0, streak: 0 }
+      },
+      {
+        id: 'activity-15',
+        time: 'MAGHRIB',
+        day: 'DAILY',
+        activity: 'Pray Maghrib',
+        weeklyTracker: [false, false, false, false, false, false, false],
+        stats: { weekly: 0, monthly: 0, streak: 0 }
+      },
+      {
+        id: 'activity-16',
+        time: 'DAILY',
+        day: 'DAILY',
+        activity: 'Eat Meal 3',
+        weeklyTracker: [false, false, false, false, false, false, false],
+        stats: { weekly: 0, monthly: 0, streak: 0 }
+      },
+      {
+        id: 'activity-17',
+        time: 'ISHA',
+        day: 'DAILY',
+        activity: 'Pray Isha',
+        weeklyTracker: [false, false, false, false, false, false, false],
+        stats: { weekly: 0, monthly: 0, streak: 0 }
+      },
+      {
+        id: 'activity-18',
+        time: 'DAILY',
+        day: 'DAILY',
+        activity: 'Sleep Early (After Isha)',
         weeklyTracker: [false, false, false, false, false, false, false],
         stats: { weekly: 0, monthly: 0, streak: 0 }
       }

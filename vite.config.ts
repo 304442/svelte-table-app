@@ -22,5 +22,5 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets'
   },
-  base: '/svelte-table-app/'
+  base: process.env.NODE_ENV === 'production' ? '/svelte-table-app/' : '/'
 })
